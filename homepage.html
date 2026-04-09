@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+
+    <nav class="dash-navbar">
+        <div class="dash-logo">My Portfolio</div>
+
+        <div class="term-tabs">
+            <button class="tab-btn active-prelim" onclick="showTerm('prelim', this)">📘 Prelim</button>
+            <button class="tab-btn" onclick="showTerm('midterm', this)">📗 Midterm</button>
+            <button class="tab-btn" onclick="showTerm('finals', this)">📙 Finals</button>
+        </div>
+
+        <a href="index.html" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i><span class="logout-text"> Logout</span>
+        </a>
+    </nav>
+
+    <div class="dash-content">
+
+        <div class="term-panel active" id="panel-prelim">
+            <div class="term-header prelim-header">
+                <div class="term-icon">📘</div>
+                <div>
+                    <h2>Prelim Period</h2>
+                    <p>First works — introductions and initial projects</p>
+                </div>
+            </div>
+
+            <div class="cards-grid">
+
+                <div class="activity-card prelim-card">
+                    <div class="card-top">
+                        🧑‍💻
+                        <span class="card-tag">Activity 1</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>About Me</h3>
+                        <p>Personal introduction — background, academic info, and career goals as an IT student.</p>
+                        <a href="about.html" class="open-btn prelim-btn"><i class="fas fa-arrow-right"></i> Open</a>
+                    </div>
+                </div>
+
+                <div class="activity-card prelim-card">
+                    <div class="card-top">
+                        🎬
+                        <span class="card-tag">Activity 2</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>My Projects</h3>
+                        <p>Sample audio and video files that are part of my outputs during the Prelim period.</p>
+                        <a href="projects.html" class="open-btn prelim-btn"><i class="fas fa-arrow-right"></i> Open</a>
+                    </div>
+                </div>
+
+                <div class="activity-card coming-card">
+                    <div class="card-top coming-top">➕<span class="coming-tag">Coming Soon</span></div>
+                    <div class="card-body">
+                        <h3>Activity 3</h3>
+                        <p>The next Prelim activity is still upcoming.</p>
+                        <button class="open-btn disabled-btn" disabled><i class="fas fa-lock"></i> Not yet available</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="term-panel" id="panel-midterm">
+            <div class="term-header midterm-header">
+                <div class="term-icon">📗</div>
+                <div>
+                    <h2>Midterm Period</h2>
+                    <p>Interactive educational tools and multimedia activities</p>
+                </div>
+            </div>
+
+            <div class="cards-grid">
+
+                <div class="activity-card midterm-card">
+                    <div class="card-top midterm-top">
+                        📝
+                        <span class="card-tag midterm-tag">Activity 1</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Educational Quiz Tool</h3>
+                        <p>Interactive quiz that tests knowledge in HTML, CSS, and JavaScript. Includes timer and auto-check.</p>
+                        <a href="quiz.html" class="open-btn midterm-btn"><i class="fas fa-arrow-right"></i> Open</a>
+                    </div>
+                </div>
+
+                <div class="activity-card midterm-card">
+                    <div class="card-top midterm-top">
+                        🦉
+                        <span class="card-tag midterm-tag">Activity 2</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Nico the Night Owl</h3>
+                        <p>Interactive story viewer with animated slides — the story of an owl with big dreams.</p>
+                        <a href="story.html" class="open-btn midterm-btn"><i class="fas fa-arrow-right"></i> Open</a>
+                    </div>
+                </div>
+
+                <div class="activity-card coming-card">
+                    <div class="card-top coming-top">➕<span class="coming-tag">Coming Soon</span></div>
+                    <div class="card-body">
+                        <h3>Activity 3</h3>
+                        <p>The next Midterm activity is still upcoming.</p>
+                        <button class="open-btn disabled-btn" disabled><i class="fas fa-lock"></i> Not yet available</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="term-panel" id="panel-finals">
+            <div class="term-header finals-header">
+                <div class="term-icon">📙</div>
+                <div>
+                    <h2>Finals Period</h2>
+                    <p>Advanced and final projects for the last assessment</p>
+                </div>
+            </div>
+
+            <div class="cards-grid">
+                <div class="activity-card coming-card">
+                    <div class="card-top coming-top">➕<span class="coming-tag">Coming Soon</span></div>
+                    <div class="card-body">
+                        <h3>Activity 1</h3>
+                        <p>Finals activities are still upcoming. Stay tuned!</p>
+                        <button class="open-btn disabled-btn" disabled><i class="fas fa-lock"></i> Not yet available</button>
+                    </div>
+                </div>
+                <div class="activity-card coming-card">
+                    <div class="card-top coming-top">➕<span class="coming-tag">Coming Soon</span></div>
+                    <div class="card-body">
+                        <h3>Activity 2</h3>
+                        <p>Finals activities are still upcoming. Stay tuned!</p>
+                        <button class="open-btn disabled-btn" disabled><i class="fas fa-lock"></i> Not yet available</button>
+                    </div>
+                </div>
+                <div class="activity-card coming-card">
+                    <div class="card-top coming-top">➕<span class="coming-tag">Coming Soon</span></div>
+                    <div class="card-body">
+                        <h3>Activity 3</h3>
+                        <p>Finals activities are still upcoming. Stay tuned!</p>
+                        <button class="open-btn disabled-btn" disabled><i class="fas fa-lock"></i> Not yet available</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+
+    <script>
+        function showTerm(term, clickedBtn) {
+            document.querySelectorAll('.term-panel').forEach(p => p.classList.remove('active'));
+            document.getElementById('panel-' + term).classList.add('active');
+            document.querySelectorAll('.tab-btn').forEach(b => {
+                b.classList.remove('active-prelim', 'active-midterm', 'active-finals');
+            });
+            clickedBtn.classList.add('active-' + term);
+        }
+    </script>
+
+</body>
+</html>

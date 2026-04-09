@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | Homepage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+
+    <nav class="dash-navbar">
+        <div class="dash-logo">My Portfolio</div>
+        <a href="homepage.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Homepage
+        </a>
+    </nav>
+
+    <main class="page-content">
+
+        <h2 class="page-title">📚 Educational Assistance Tool</h2>
+
+        <div class="quiz-container">
+            <div class="qa-item">
+                <p><strong>Query 1:</strong> How much is the Tuition fee per semester excluding other fees?</p>
+                <button onclick="showAnswer(1)">Show Answer</button>
+                <div id="answer1" class="answer"></div>
+            </div>
+
+            <div class="qa-item">
+                <p><strong>Query 2:</strong> What are the office hours of the registrar?</p>
+                <button onclick="showAnswer(2)">Show Answer</button>
+                <div id="answer2" class="answer"></div>
+            </div>
+
+            <div class="qa-item">
+                <p><strong>Query 3:</strong> What documents are required for enrollment?</p>
+                <button onclick="showAnswer(3)">Show Answer</button>
+                <div id="answer3" class="answer"></div>
+            </div>
+
+            <div class="progress-bar" id="progress">Progress: 0 / 3 answered</div>
+        </div>
+
+        <hr style="margin: 35px 0; border-color: rgba(0,0,0,0.1);">
+
+        <h2 class="page-title">📝 Educational Quiz Tool</h2>
+
+        <div class="quiz-container">
+            <div class="timer">⏱ Time Left: <span id="time">60</span> seconds</div>
+
+            <form id="quizForm">
+
+                <p class="quiz-question">1. What does HTML stand for?</p>
+                <label class="quiz-option"><input type="radio" name="q1" value="a"> Hyper Text Markup Language</label>
+                <label class="quiz-option"><input type="radio" name="q1" value="b"> High Tech Modern Language</label>
+                <label class="quiz-option"><input type="radio" name="q1" value="c"> Home Tool Markup Language</label>
+
+                <p class="quiz-question">2. Which tag is used to insert an image?</p>
+                <label class="quiz-option"><input type="radio" name="q2" value="a"> &lt;img&gt;</label>
+                <label class="quiz-option"><input type="radio" name="q2" value="b"> &lt;image&gt;</label>
+                <label class="quiz-option"><input type="radio" name="q2" value="c"> &lt;pic&gt;</label>
+
+                <p class="quiz-question">3. Which CSS property changes text color?</p>
+                <label class="quiz-option"><input type="radio" name="q3" value="a"> background</label>
+                <label class="quiz-option"><input type="radio" name="q3" value="b"> color</label>
+                <label class="quiz-option"><input type="radio" name="q3" value="c"> font-style</label>
+
+                <p class="quiz-question">4. Which symbol is used for comments in JavaScript?</p>
+                <label class="quiz-option"><input type="radio" name="q4" value="a"> //</label>
+                <label class="quiz-option"><input type="radio" name="q4" value="b"> ##</label>
+                <label class="quiz-option"><input type="radio" name="q4" value="c"> &lt;!-- --&gt;</label>
+
+                <p class="quiz-question">5. Which company developed JavaScript?</p>
+                <label class="quiz-option"><input type="radio" name="q5" value="a"> Microsoft</label>
+                <label class="quiz-option"><input type="radio" name="q5" value="b"> Netscape</label>
+                <label class="quiz-option"><input type="radio" name="q5" value="c"> Google</label>
+
+                <br>
+                <button type="button" onclick="checkQuiz()">Submit Quiz</button>
+            </form>
+
+            <div id="result" class="result-box"></div>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
